@@ -1,0 +1,225 @@
+@use 'sass:math'; // Импорт модуля для math.div
+@import 'variables';
+@import 'header-template';
+
+// Контейнер для содержимого фракции
+.faction-content {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto auto; // Оставляем как есть
+    gap: 0; // Убираем автоматический отступ между элементами
+    background-color: $primary-bg; // Основной фон (как у steam-groups)
+    padding: $padding 30px; // Отступы: сверху и снизу — $padding, слева и справа — 30px
+    border-radius: $border-radius;
+    max-width: 70%; // Ограничиваем ширину грида
+    margin: 0 15%; // Добавляем отступы 15% слева и справа для центрирования
+
+    // Стили для строки заголовка и кнопки
+    .header-row {
+        display: flex;
+        justify-content: space-between; // Размещаем элементы по краям
+        align-items: center; // Выравниваем по вертикали
+        width: 100%;
+    }
+
+    // Стили для кнопки "На главную"
+    .home-button {
+        display: inline-block;
+        padding: 10px 20px; // Отступы внутри кнопки
+        background-color: rgb(255, 130, 0); // Оранжевый фон, как у заголовка
+        color: $primary-bg; // Цвет текста (тёмный, чтобы контрастировал с оранжевым)
+        font-family: 'Stem-Regular', sans-serif;
+        font-size: $font-size-base; // Размер шрифта как у обычного текста
+        text-decoration: none; // Убираем подчёркивание
+        border-radius: $border-radius; // Скругление углов
+        transition: background-color 0.3s ease, transform 0.1s ease; // Плавный переход для фона и эффекта нажатия
+
+        &:hover {
+            background-color: rgb(255, 150, 50); // Светлее при наведении
+        }
+
+        &:active {
+            transform: scale(0.95); // Эффект нажатия (уменьшение)
+        }
+    }
+
+    // Добавляем стили для всех ссылок внутри .faction-content (кроме .home-button)
+    a:not(.home-button) {
+        color: #fff3b1; // Цвет всех ссылок
+        text-decoration: none; // Убираем подчёркивание
+        transition: color 0.3s ease; // Плавный переход цвета при наведении
+
+        &:hover {
+            color: #ffffff; // Светлее при наведении
+        }
+    }
+
+    // Добавляем отступы для дочерних элементов вручную
+    .logo {
+        margin-bottom: 20px; // Отступ между логотипом и секцией "Описание"
+        cursor: pointer; // Указываем, что логотип кликабельный
+    }
+
+    .description {
+        margin-bottom: 20px; // Отступ между разделами "Описание" и "Задача"
+    }
+
+    .tasks {
+        margin-bottom: 20px; // Отступ между разделами "Задача" и "Дополнительно"
+    }
+}
+
+// Стили для раздела описания
+.description {
+    h2 {
+        font-size: $font-size-h1; // Размер шрифта как у h1 (2.5rem)
+        color: $text-color;
+        margin: 0; // Убираем все отступы, чтобы полоска была вплотную
+        text-align: left; // Выравниваем по левому краю
+    }
+
+    .separator {
+        margin: 0 0 10px 0; // Убираем верхний отступ, добавляем нижний для отделения от текста
+    }
+
+    p {
+        font-family: 'Stem-Regular', sans-serif; // Шрифт Stem-Regular
+        font-size: $font-size-base;
+        color: $text-color;
+        line-height: 1.6;
+        text-align: left; // Выравниваем текст по левому краю
+        margin-bottom: 10px; // Отступ между параграфами
+
+        &:last-child {
+            margin-bottom: 0; // Убираем отступ у последнего параграфа
+        }
+    }
+}
+
+// Стили для раздела задачи
+.tasks {
+    h2 {
+        font-size: $font-size-h1; // Размер шрифта как у h1 (2.5rem)
+        color: $text-color;
+        margin: 0; // Убираем все отступы, чтобы полоска была вплотную
+        text-align: left; // Выравниваем по левому краю
+    }
+
+    .separator {
+        margin: 0 0 10px 0; // Убираем верхний отступ, добавляем нижний для отделения от текста
+    }
+
+    p {
+        font-family: 'Stem-Regular', sans-serif; // Шрифт Stem-Regular
+        font-size: $font-size-base;
+        color: $text-color;
+        line-height: 1.6;
+        text-align: left; // Выравниваем текст по левому краю
+        margin-bottom: 10px; // Отступ между параграфами
+
+        &:last-child {
+            margin-bottom: 0; // Убираем отступ у последнего параграфа
+        }
+    }
+
+    .hostile-factions {
+        .hostile-label {
+            color: #ff0000; // Красный цвет для "Враждебные фракции"
+        }
+    }
+
+    .neutral-factions {
+        .neutral-label {
+            color: #ffff00; // Жёлтый цвет для "Нейтральные фракции"
+        }
+    }
+
+    .other-factions {
+        .other-label {
+            color: #00ff00; // Зелёный цвет для "Дружественные фракции"
+        }
+    }
+}
+
+// Стили для раздела дополнительно
+.additional {
+    h2 {
+        font-size: $font-size-h1; // Размер шрифта как у h1 (2.5rem)
+        color: $text-color;
+        margin: 0; // Убираем все отступы, чтобы полоска была вплотную
+        text-align: left; // Выравниваем по левому краю
+    }
+
+    .separator {
+        margin: 0 0 10px 0; // Убираем верхний отступ, добавляем нижний для отделения от текста
+    }
+
+    h3 {
+        font-family: 'Stem-Bold', sans-serif; // Шрифт Stem-Bold для подзаголовка
+        font-size: $font-size-base; // Размер шрифта как у обычного текста (1rem)
+        color: $text-color;
+        margin: 10px 0; // Отступы сверху и снизу
+        text-align: left; // Выравниваем по левому краю
+    }
+
+    audio {
+        display: block;
+        width: 300px; // Ширина 300px, как ты установил
+        margin: 10px 0; // Отступы сверху и снизу
+    }
+
+    ul {
+        font-family: 'Stem-Regular', sans-serif; // Шрифт Stem-Regular
+        font-size: $font-size-base;
+        color: $text-color;
+        line-height: 1.6;
+        text-align: left; // Выравниваем текст по левому краю
+        margin: 10px 0 10px 20px; // Уменьшаем margin-left до 20px, чтобы учесть padding: 30px
+        padding-left: 50px; // Отступ для маркеров
+
+        li {
+            margin-bottom: 10px; // Отступ между пунктами списка
+
+            &:last-child {
+                margin-bottom: 0; // Убираем отступ у последнего пункта
+            }
+        }
+    }
+}
+
+// Стили для модального окна
+.modal {
+    display: none; // Скрываем модальное окно по умолчанию
+    position: fixed; // Фиксируем позицию, чтобы окно было поверх всего
+    z-index: 1000; // Высокий z-index, чтобы окно было выше остального контента
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); // Затемнённый фон
+    overflow: auto; // Добавляем прокрутку, если изображение не помещается
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto; // Центрируем изображение с отступом 5% сверху
+    width: 80%; // Ширина изображения 80% от ширины окна
+    max-width: 600px; // Максимальная ширина 600px
+    border: 2px solid $text-color; // Добавляем рамку
+    border-radius: $border-radius;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: $text-color;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: #bbb; // Светлее при наведении
+        text-decoration: none;
+    }
+}

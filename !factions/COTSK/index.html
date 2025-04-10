@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дети Алого Короля</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-cotsk">
+                    <h1>Дети Алого Короля</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/scarlet.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                   ДАК, как фракция образовалась из-за откола группы участников группировки «Длань Змея». В их рядах находятся люди с аномальными возможностями, ещё не известен их способ получения паранормальных способностей. У них также имеется своё божество в лице Алого Короля, которому они поклоняются.
+
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Вызов  SCP-001 "Алого Короля".</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span>  <a href="/!factions/GOC/index.html">ГОК</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!foundation/security/index.html">Отдел безопасности</a>, <a href="/!foundation/QRT/index.html">Отряд Быстрого Реагирования</a>, <a href="/!foundation/MTF/index.html">Мобильная Оперативная Группа</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон-11</a>, <a href="../class-d/index.html">Класс Д</a>, <a href="/!foundation/sci/index.html">Научный отдел</a>, <a href="/!foundation/spec-sci/index.html">Спец. ученые</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span>  отсутствуют
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> отсутствуют
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук оповещения о прибытии</h3>
+                <audio controls>
+                    <source src="../../media/Enemy.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук из вступления</h3>
+                <audio controls>
+                    <source src="../../media/cult_theme.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li>ДАК всегда приходят первыми.</li>
+                    <li><a href="/!factions/COTSK/commander.html">Командир ДАК</a> и <a href="/!factions/COTSK/special.html">Специалист ДАК</a> получают свиток для вызова Алого Короля.</li>
+                    <li>Если <a href="/!factions/COTSK/commander.html">Командир ДАК</a> или <a href="/!factions/COTSK/special.html">Специалист ДАК</a> умрет, у остальных солдат есть возможноть забрать свиток призыва.</li>
+                    <li>Для взрыва комплекса потребуется 2:10 минуты.</li>
+                    <li>После объявлении об эвакуации, ДАК не могут начать ритаул призыва короля.</li>
+                    <li>Если ритуал удался, всех игроков переносит на поверхность и их убивает Алый король.</li>
+                    <li>Ритуал можно возобновить, если его остановили.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

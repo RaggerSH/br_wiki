@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Специальные Ученые</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-spec-sci">
+                    <h1>Спец-ученые</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/sci_special.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Спец. учёные являются особыми, отличившимися от других сотрудников, учёными. Не многочисленны, каждый из них имеет свои особые навыки которые могут помочь в устранении последствий Нарушений Условий Содержания. При эвакуации персонала, спец.учёные имеют первостепенный приоритет для МОГ и НТФ.
+                </p>
+                <p>
+                    В случае возникновения в учреждении катастрофического события всем специальным сотрудникам фонда рекомендуется как можно быстрее найти службу безопасности и помочь им при необходимости в устранении SCP.
+                </p>
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Выбраться из комплекса живым.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span> отсутствуют
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span> <a href="../class-d/index.html">Класс Д</a>, <a href="/!factions/GOC/index.html">ГОК</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!factions/CI/index.html">Повстанцы Хаоса</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="/!foundation/MTF/index.html">Мобильная Оперативная Группа</a>, <a href="/!foundation/QRT/index.html">Отряд Быстрого Реагирования</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон-11</a>, <a href="/!foundation/security/index.html">Отдел безопасности</a>, <a href="/!foundation/sci/index.html">Научный отдел</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук начала раунда</h3>
+                <audio controls>
+                    <source src="../../media/Start_round_sci.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+            
+                <ul>
+                    <li>У всех спец. ученых фиксированные имена.</li>
+                    <li>Все спец. ученые произносят уникальные фразы после применения своей способности, за исключением <a href="/!foundation/spec-sci/ruprecht.txt">Руперта</a>.</li>
+                    <li>Спец. ученые имеют такие же задачу и ранг, как и у обычных учёных, но им отдается приоритет в эвакуации</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

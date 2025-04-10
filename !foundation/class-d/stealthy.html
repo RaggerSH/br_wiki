@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класс-D Скрытник</title>
+    <link rel="stylesheet" href="../../css/styles-roles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="role-content">
+            <div class="header-row">
+                <header class="header-template role-class-d-fat">
+                    <h1>Класс-D Скрытник</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="description">
+                <p></p> <!-- Пустой параграф для первого отступа -->
+                <p></p> <!-- Пустой параграф для второго отступа -->
+                <p>Класс-Д Скрытник — владеет очень профессиональными навыками по маскировке.</p>
+            </div>
+            <div class="role-image">
+                <img src="/img/Hitman.webp" alt="Класс-D Скрынник" id="role-img" onclick="openModal()">
+            </div>
+            <div class="image-buttons">
+                <button class="image-btn active" data-img="/img/Hitman.webp">Обычный</button>
+                <button class="image-btn" data-img="/img/Classdci.webp">Форма ПХ</button>
+            </div>
+            <div class="characteristics">
+                <button class="toggle-button">Характеристики</button>
+                <div class="char-list">
+                    <ul>
+                        <li>Здоровье: 100</li>
+                        <li>Стамина: 100</li>
+                        <li>Требуемый уровень: 35</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ability">
+                <div class="ability">
+                    <button class="toggle-button">Способность</button>
+                    <div class="ability-content">
+                        <div class="ability-image">
+                            <img src="/img/Ability_hitman.webp" alt="Димаскрынник" width="150px" height="150px" >
+                        </div>
+                        <div class="ability-description">
+                            <p>Скрытник применяет облик выбранного трупа, сам труп остается на месте с одеждой скрытника.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>Роли, в которые не может переодеться cкрытник: <a href="/!foundation/MTF/hof.html">Глава комплекса</a>, <a href="/!foundation/sci/hop.html">Глава персонала</a>, <a href="/!foundation/spec-sci/index.html">Спец ученые</a>, <a href="/!factions/COTSK/index.html">Культисты ДАК</a>, <a href="/!factions/GOC/index.html">Оперативники ГОК</a>, <a href="/!factions/SH/index.html">Члены Длани Змея</a>, <a href="/!foundation/class-d/fat.html">Класс-Д Жирный</a>, <a href="/!foundation/class-d/bor.html">Класс-Д Качок</a>, <a href="/!foundation/MTF/jugg.html">Джаггернаут МОГ</a>, <a href="/!factions/CI/jugg.html">Джаггернаут ПХ</a>, а также женские персонажи. </li>
+                    <li>Подсвечивается белым у <a href="/!foundation/class-d/index.html">Класса Д</a> будучи в облике, <a href="/!items/equipables/form.html">униформе</a> и <a href="/!items/equipables/hazmat.html">защитном костюме</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="/JavaScript/main.js"></script>
+</body>
+</html>

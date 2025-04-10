@@ -1,0 +1,13 @@
+// scss/_header.scss
+.header {
+    text-align: center;
+    padding: $padding;
+    background-color: $primary-bg;
+    border-radius: $border-radius;
+
+    h1 {
+        font-size: $font-size-h1;
+        color: $text-color;
+        margin: 0;
+    }
+}

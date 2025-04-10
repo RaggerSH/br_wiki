@@ -1,0 +1,98 @@
+// Стили для заголовка, разделителя и логотипа, которые можно переиспользовать
+.header-template {
+    text-align: left; // Выравнивание на левое
+    flex-shrink: 0; // Не сжимаем заголовок
+
+    h1 {
+        font-size: $font-size-h1;
+        margin: 0;
+    }
+
+    // Цвета для заголовков в зависимости от фракции
+    &.faction-class-d {
+        h1 {
+            color: rgb(255, 130, 0); // Class-D (оранжевый)
+        }
+    }
+
+    &.faction-sci {
+        h1 {
+            color: rgb(66, 188, 244); // Scientists (голубой)
+        }
+    }
+
+    &.faction-spec-sci {
+        h1 {
+            color: rgb(238, 130, 238); // Special-scientists (фиолетовый)
+        }
+    }
+
+    &.faction-security {
+        h1 {
+            color: rgb(123, 104, 238); // Security Department (сине-фиолетовый)
+        }
+    }
+
+    &.faction-mtf {
+        h1 {
+            color: rgb(70, 130, 180); // MOG (синий)
+        }
+    }
+
+    &.faction-qrt {
+        h1 {
+            color: rgb(65, 105, 225); // Quick Response Team (синий)
+        }
+    }
+
+    &.faction-ntf {
+        h1 {
+            color: rgb(70, 130, 180); // Nine Tailed Fox (синий)
+        }
+    }
+
+    &.faction-ci {
+        h1 {
+            color: rgb(29, 81, 56); // Chaos Insurgency (тёмно-зелёный)
+        }
+    }
+
+    &.faction-goc {
+        h1 {
+            color: rgb(178, 34, 34); // Global Occult Coalition (красный)
+        }
+    }
+
+    &.faction-sh {
+        h1 {
+            color: rgb(46, 139, 87); // Serpents Hand (зелёный)
+        }
+    }
+
+    &.faction-uiu {
+        h1 {
+            color: #ffffff; // Unusual Incidents Unit (белый)
+        }
+    }
+
+    &.faction-cotsk {
+        h1 {
+            color: rgb(199, 177, 177); // Children of the Scarlet King (серо-розовый)
+        }
+    }
+}
+
+.separator {
+    width: 100%;
+    height: 1px; // Толщина полоски
+    background-color: $text-color; // Белая полоска
+    margin: 0 0 30px 0; // Увеличиваем нижний отступ до 15px (10px + 5px)
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px; // Уменьшенная ширина
+    height: 200px; // Уменьшенная высота
+    border-radius: 50%;
+}

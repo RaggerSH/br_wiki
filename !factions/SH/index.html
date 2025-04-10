@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Длань Змеи</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-sh">
+                    <h1>Длань Змеи</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/dz.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Длань Змеи - малая, но крайне агрессивно настроенная к Фонду организация, виновная в нарушении безопасности на некоторых объектах. У Длани Змея присутствует и используется большое количество аномальных предметов, также они ведут контакт с разумными SCP объектами
+                </p>
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Захват <a href="/!other/scp_play/index.html">SCP</a>, обеспечение их защиты и дальнейшая эвакуация.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span> отсутствуют
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span> <a href="../MTF/index.html">Мобильная оперативная группа</a> , <a href="../QRT/index.html">Отряд быстрого реагирования</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон 11</a>, <a href="/!factions/GOC/index.html">ГОК</a>, <a href="../sci/index.html">Научный Отдел</a>, <a href="../spec-sci/index.html">Спец-ученые</a>, <a href="../security/index.html">Отдел безопасности</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!factions/CI/index.html">Повстанцы Хаоса</a>
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук оповещения о прибытии</h3>
+                <audio controls>
+                    <source src="../../media/Enemy.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук из вступления</h3>
+                <audio controls>
+                    <source src="../../media/DzIntro.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li><a href="/!foundation/sci/SH_spy.html">Шпион ДЗ</a> имеет зеленую подсветку у своих союзников.</li>
+                    <li>Члены Длани Змея, кроме <a href="/!foundation/sci/SH_spy.html">шпиона ДЗ</a> невосприимчивы к газу в Легкой Зоне Содержания.</li>
+                    <li>Члены Длани Змея имеют 1 дополнительный слот в инвентаре.</li>
+                    <li>Члены Длани Змея получают дополнительный опыт за эвакуацию <a href="/!other/scp_play/index.html">SCP</a> объектов, как предметов, так и игроков</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

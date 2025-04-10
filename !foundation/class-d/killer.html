@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класс-D Убийца</title>
+    <link rel="stylesheet" href="../../css/styles-roles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="role-content">
+            <div class="header-row">
+                <header class="header-template role-class-d-fat">
+                    <h1>Класс-D Убийца</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="description">
+                <p></p> <!-- Пустой параграф для первого отступа -->
+                <p></p> <!-- Пустой параграф для второго отступа -->
+                <p>Класс-Д Убийца — Обладает острой <a href="/!weapons/melee/pocketknife.html">заточкой</a>, с помощью которой, он может убить цель. Воспользоваться заточкой возможно лишь один раз.</p>
+            </div>
+            <div class="role-image">
+                <img src="/img/Killer.webp" alt="Класс-D Убийца" id="role-img" onclick="openModal()">
+            </div>
+            <div class="image-buttons">
+                <button class="image-btn active" data-img="/img/Killer.webp">Обычный</button>
+                <button class="image-btn" data-img="/img/Classdcifem.webp">Форма ПХ</button>
+            </div>
+            <div class="characteristics">
+                <button class="toggle-button">Характеристики</button>
+                <div class="char-list">
+                    <ul>
+                        <li>Здоровье: 115</li>
+                        <li>Стамина: 100</li>
+                        <li>Требуемый уровень: 9</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>Получает <a href="/!weapons/melee/pocketknife.html">заточку</a> при спавне, которая убивает с одного удара.</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="/JavaScript/main.js"></script>
+</body>
+</html>

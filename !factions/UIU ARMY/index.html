@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агенты Отдела Необычных Происшествий</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-uiu">
+                    <h1>Агенты Отдела Необычных Происшествий</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/fbi_agent.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Отдел Необычных Происшествий — Второй с конца по престижности отдел ФБР. Главной задачей ОНП является защита США от паранормальных угроз.
+                </p>
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Проникновение в Комплекс и похищение данных с 5-ти компьютеров Комплекса. После выполнения поставленной задачи, покинуть Комплекс.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span> отсутствуют
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span> <a href="../MTF/index.html">Мобильная оперативная группа</a> , <a href="../QRT/index.html">Отряд быстрого реагирования</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон 11</a>, <a href="/!factions/GOC/index.html">ГОК</a>, <a href="../sci/index.html">Научный Отдел</a>, <a href="../spec-sci/index.html">Спец-ученые</a>, <a href="../security/index.html">Отдел безопасности</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!factions/CI/index.html">Повстанцы Хаоса</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук из вступления</h3>
+                <audio controls>
+                    <source src="../../media/fbi_agent_spawn.wav" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук после взлома первого компьютера</h3>
+                <audio controls>
+                    <source src="../../media/fbi_action_start.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук после взлома последнего компьютера</h3>
+                <audio controls>
+                    <source src="../../media/fbi_escape_loop.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук, повторяющийся после звука последнего взлома</h3>
+                <audio controls>
+                    <source src="../../media/fbi_action_loop.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li>У Агентов ОНП нет оповещения о прибытии.</li>
+                    <li>Агенты ОНП могут прийти только первой поддержкой.</li>
+                    <li>Максимум может прибыть только 5 оперативников.</li>
+                    <li>Единовременно можно взломать только один компьютер. Взлом занимает до 30-ти секунд.</li>
+                    <li>Если ОНП взломали все компьютеры комплекса, то, во время эвакуации, ворота на поверхность и КПП комплекса продолжат запрашивать ключ-карты для их открытия. Также нельзя будет взаимодействовать с панелью вызова <a href="/!foundation/QRT/index.html">ОБР</a>.</li>
+                    <li>При беге, прыжке или приседании, вы будете издавать слышимые для всех звуки.</li>
+                    <li><a href="/!foundation/sci/UIU_spy.html">Шпион ОНП</a>Имеет зеленую подсветку для своих союзников.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

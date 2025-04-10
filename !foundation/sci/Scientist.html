@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ученый</title>
+    <link rel="stylesheet" href="../../css/styles-roles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="role-content">
+            <div class="header-row">
+                <header class="header-template role-sci">
+                    <h1>Ученый</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="description">
+                <p></p> <!-- Пустой параграф для первого отступа -->
+                <p></p> <!-- Пустой параграф для второго отступа -->
+                <p>Учёные являются основой всего Научного Персонала Фонда и имеют обширный доступ к Light Containment Zone.</p>
+            </div>
+            <div class="role-image">
+                <img src="/img/Scientist.webp" alt="Ученый" id="role-img" onclick="openModal()">
+            </div>
+            <div class="characteristics">
+                <button class="toggle-button">Характеристики</button>
+                <div class="char-list">
+                    <ul>
+                        <li>Здоровье: 100</li>
+                        <li>Стамина: 50</li>
+                        <li>Требуемый уровень: 12</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>При появлении получает<a href="/!other/keycards/obshie.html">ключ-карту научного персонала 2 уровня</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="/JavaScript/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+@use 'sass:math';
+@import 'variables';
+@import 'header-template';
+
+.role-content {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto; // Добавляем строку для .ability
+    gap: 20px;
+    background-color: $primary-bg;
+    padding: $padding 30px;
+    border-radius: $border-radius;
+    max-width: 70%;
+    margin: 0 15%;
+    /* Остальные стили остаются без изменений */
+
+    .header-row {
+        display: grid;
+        grid-template-columns: 1fr auto; // Заголовок слева, кнопка справа
+        align-items: center;
+    }
+
+    .header-template {
+        // Цвета для заголовков в зависимости от фракции
+        &.role-class-d-fat {
+            h1 {
+                color: rgb(255, 130, 0); // Class-D (оранжевый)
+            }
+        }
+
+        &.role-sci {
+            h1 {
+                color: rgb(66, 188, 244); // Scientists (голубой)
+            }
+        }
+
+        &.role-spec-sci {
+            h1 {
+                color: rgb(238, 130, 238); // Special-scientists (фиолетовый)
+            }
+        }
+
+        &.role-security {
+            h1 {
+                color: rgb(123, 104, 238); // Security Department (сине-фиолетовый)
+            }
+        }
+
+        &.role-mtf {
+            h1 {
+                color: rgb(70, 130, 180); // MOG (синий)
+            }
+        }
+
+        &.role-qrt {
+            h1 {
+                color: rgb(65, 105, 225); // Quick Response Team (синий)
+            }
+        }
+
+        &.role-ntf {
+            h1 {
+                color: rgb(70, 130, 180); // Nine Tailed Fox (синий)
+            }
+        }
+
+        &.role-ci {
+            h1 {
+                color: rgb(29, 81, 56); // Chaos Insurgency (тёмно-зелёный)
+            }
+        }
+
+        &.role-goc {
+            h1 {
+                color: rgb(178, 34, 34); // Global Occult Coalition (красный)
+            }
+        }
+
+        &.role-sh {
+            h1 {
+                color: rgb(46, 139, 87); // Serpents Hand (зелёный)
+            }
+        }
+
+        &.role-uiu {
+            h1 {
+                color: #ffffff; // Unusual Incidents Unit (белый)
+            }
+        }
+
+        &.role-cotsk {
+            h1 {
+                color: rgb(199, 177, 177); // Children of the Scarlet King (серо-розовый)
+            }
+        }
+    }
+
+    .home-button {
+        padding: 10px 20px;
+        background-color: rgb(255, 130, 0);
+        color: $primary-bg;
+        font-family: 'Stem-Regular', sans-serif;
+        font-size: $font-size-base;
+        text-decoration: none;
+        border-radius: $border-radius;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+
+        &:hover {
+            background-color: rgb(255, 150, 50);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+    .description {
+        p {
+            font-family: 'Stem-Regular', sans-serif;
+            font-size: $font-size-base;
+            color: $text-color;
+            line-height: 1.6;
+            text-align: left;
+        }
+    }
+
+    .role-image {
+        display: grid;
+        justify-items: center; // Центрируем изображение
+        img {
+            max-width: 30%; // Уменьшаем в ~2.5 раза
+            height: auto; // Сохраняем пропорции
+            border-radius: $border-radius;
+            cursor: pointer;
+        }
+    }
+
+    .image-buttons {
+        display: flex; // Используем flexbox для горизонтального расположения
+        justify-content: center; // Центрируем кнопки
+        gap: 10px; // Отступы между кнопками 10px
+
+        button {
+            padding: 10px 20px;
+            background-color: $secondary-bg;
+            color: $text-color;
+            font-family: 'Stem-Regular', sans-serif;
+            font-size: $font-size-base;
+            border: none;
+            border-radius: $border-radius;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &.active {
+                background-color: rgb(255, 130, 0); // Оранжевый для активной кнопки
+            }
+
+            &:hover {
+                background-color: lighten($secondary-bg, 10%);
+            }
+        }
+    }
+
+    .characteristics {
+        display: grid;
+        grid-template-rows: auto 1fr; // Заголовок и содержимое списка
+        gap: 10px;
+
+        .toggle-button {
+            padding: 10px;
+            background-color: $secondary-bg;
+            color: $text-color;
+            font-family: 'Stem-Regular', sans-serif;
+            font-size: $font-size-base;
+            border: none;
+            border-radius: $border-radius;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: lighten($secondary-bg, 10%);
+            }
+        }
+
+        .char-list {
+            // Список виден по умолчанию
+            font-family: 'Stem-Regular', sans-serif;
+            font-size: $font-size-base;
+            color: $text-color;
+            line-height: 1.6;
+            padding: 10px;
+            background-color: darken($primary-bg, 5%);
+            border-radius: $border-radius;
+
+            &.hidden {
+                display: none; // Скрываем при добавлении класса hidden
+            }
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .features {
+        font-family: 'Stem-Regular', sans-serif;
+        font-size: $font-size-base;
+        color: $text-color;
+        line-height: 1.6;
+        padding: 10px;
+        background-color: darken($primary-bg, 5%);
+        border-radius: $border-radius;
+
+        ul {
+            list-style: disc; // Добавляем маркеры в виде точек
+            padding-left: 20px; // Отступ для маркеров
+
+            li {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// Модальное окно
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid $text-color;
+    border-radius: $border-radius;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: $text-color;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: #bbb;
+    }
+}
+a {
+    color: #fff3b1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: lighten(#fff3b1, 10%);
+    }
+}

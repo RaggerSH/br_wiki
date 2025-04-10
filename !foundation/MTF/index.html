@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мобильная Оперативная Группа</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-mtf">
+                    <h1>Мобильная Оперативная Группа</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/mtf.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Мобильные оперативные группы представляют собой небольшие, специализирующиеся на выполнении определенных задач или занимающиеся особыми ситуациями военные подразделения. В их основные задачи входит восстановление условий содержания SCP-объектов и эвакуация персонала фонда, хотя существуют и более специализированные подразделения.
+                </p>
+
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Эвакуация и защита <a href="/!foundation/sci/index.html">Научного отдела</a> и <a href="/!foundation/spec-sci/index.html">Спец. ученых</a> из Light Containment Zone.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span>  <a href="/!factions/GOC/index.html">ГОК</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!factions/CI/index.html">Повстанцы Хаоса</a>, <a href="../class-d/index.html">Класс Д</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span> отсутствуют
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="/!foundation/security/index.html">Отдел безопасности</a>, <a href="/!foundation/QRT/index.html">Отряд Быстрого Реагирования</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон-11</a>, <a href="/!foundation/sci/index.html">Научный отдел</a>, <a href="/!foundation/spec-sci/index.html">Спец. ученые</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук начала раунда</h3>
+                <audio controls>
+                    <source src="../../media/Start_round_mtf.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук из вступления</h3>
+                <audio controls>
+                    <source src="../../media/Mtfintro.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li>Комната появления всего состава МОГ будет заперта определенное время после начала раунда.</li>
+                    <li>За каждого эвакуированного человека из научного персонала через вертолет,вы получаете ~35 опыта.</li>
+                    <li>При беге, прыжке или приседании, вы будете издавать слышимые для всех звуки.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

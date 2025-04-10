@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глобальная Оккультная Коалиция</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-goc">
+                    <h1>Глобальная Оккультная Коалиция</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/goc.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    ГОК - Это специальная организация, которая была создана странами О.О.Н для предотвращения разного рода паранормальных явлений. Сама организация была создана после Второй Мировой Войны, имея у себя в составе оккультистов, экстрасенсов, священнослужителей и ученых. Находясь под крылом О.О.Н, те не имели право даже посягнуть на объекты Фонда, но по любому приказу - те вспрыгивали и начинали выполнение своей задачи. Организацией было ликвидировано довольно большое количество SCP объектов, опасных для людей.
+                </p>
+
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Активация и в последствии защита боеголовки для подрыва комплекса.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span>  <a href="/!factions/GOC/index.html">ГОК</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!foundation/security/index.html">Отдел безопасности</a>, <a href="/!foundation/QRT/index.html">Отряд Быстрого Реагирования</a>, <a href="/!foundation/MTF/index.html">Мобильная Оперативная Группа</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон-11</a>, <a href="../class-d/index.html">Класс Д</a>, <a href="/!foundation/sci/index.html">Научный отдел</a>, <a href="/!foundation/spec-sci/index.html">Спец. ученые</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span>  отсутствуют
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> отсутствуют
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук оповещения о прибытии</h3>
+                <audio controls>
+                    <source src="../../media/GocIncoming.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук из вступления</h3>
+                <audio controls>
+                    <source src="../../media/Goc.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук, если миссия выполнена</h3>
+                <audio controls>
+                    <source src="../../media/goc_won.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li>ГОК всегда приходят первыми.</li>
+                    <li><a href="/!foundation/class-d/goc_spy.html">Шпион ГОК</a> имеет красную подсветку у своих союзников.</li>
+                    <li>Оперативники ГОК могут возобновить таймер до детонации боеголовки, если его до этого останавливали.</li>
+                    <li>Поддержка появляется в составе 4 человек.</li>
+                    <li>Оружие оперативников ГОК наносит увеличенный урон по <a href="/!other/scp_play/index.html">SCP</a>.</li>
+                    <li>Для взрыва комплекса потребуется 2:10 минуты.</li>
+                    <li>После объявлении об эвакуации, ГОК не может активировать боеголовку.</li>
+                    <li>За 5 секунд до взрыва Омега-боеголовки Вас <a href="/!other/escapes/teleportation.html">телепортирует</a>.</li>
+                    <li>При беге, прыжке или приседании, вы будете издавать слышимые для всех звуки.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

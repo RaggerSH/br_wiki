@@ -1,0 +1,190 @@
+// scss/_footer.scss
+@use 'sass:math';
+@import 'variables';
+
+// Глобально убираем подчеркивание для всех ссылок в футере
+.footer-content {
+    a {
+        text-decoration: none !important;
+        &, &:hover, &:visited, &:active, &:focus {
+            text-decoration: none !important;
+            outline: none !important;
+        }
+    }
+
+    display: grid;
+    grid-template-columns: 3fr 1fr; // Левая часть 3fr, правая 1fr
+    gap: $gap;
+
+    // Левая секция с ролями и предметами
+    .left-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // Две колонки
+        grid-template-rows: auto auto; // Два ряда
+        gap: $gap;
+    }
+
+    // Общие стили для блоков ролей, предметов и нижней секции
+    .roles, .items, .bottom-section {
+        background-color: $primary-bg;
+        padding: $padding;
+        border-radius: $border-radius;
+
+        h2 {
+            font-size: 1.25rem;
+            color: $text-color;
+            margin-bottom: math.div($padding, 2);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .sub-section-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); // Три колонки для подзаголовков
+            gap: 10px;
+            margin-bottom: $padding;
+        }
+
+        .sub-section {
+            h3 {
+                font-size: 0.9rem;
+                margin-bottom: math.div($padding, 2);
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                white-space: nowrap;
+                color: $text-color; // Базовый цвет по умолчанию
+
+                // Убираем возможное подчеркивание на уровне h3
+                text-decoration: none !important;
+
+                // Цвета на основе иконок
+                &:has(img[alt="Иконка Класс-D"]) {
+                    color: rgb(255, 130, 0); // Class-D
+                }
+                &:has(img[alt="Иконка Научный отдел"]) {
+                    color: rgb(66, 188, 244); // Scientists
+                }
+                &:has(img[alt="Иконка Специальные учёные"]) {
+                    color: rgb(238, 130, 238); // Special-scientists
+                }
+                &:has(img[alt="Иконка Отдел безопасности"]) {
+                    color: rgb(123, 104, 238); // Security Department
+                }
+                &:has(img[alt="Иконка МОГ"]) {
+                    color: rgb(70, 130, 180); // MOG
+                }
+                &:has(img[alt="Иконка ОБР"]) {
+                    color: rgb(65, 105, 225); // Quick Response Team
+                }
+                &:has(img[alt="Иконка МОГ Эпсилон-11"]) {
+                    color: rgb(70, 130, 180); // Nine Tailed Fox
+                }
+                &:has(img[alt="Иконка Повстанцы Хаоса"]) {
+                    color: rgb(29, 81, 56); // Chaos Insurgency
+                }
+                &:has(img[alt="Иконка ГОК"]) {
+                    color: rgb(178, 34, 34); // Global Occult Coalition
+                }
+                &:has(img[alt="Иконка Длань Змеи"]) {
+                    color: rgb(46, 139, 87); // Serpents Hand
+                }
+                &:has(img[alt="Иконка ОНП"]) {
+                    color: #ffffff; // Unusual Incidents Unit
+                }
+                &:has(img[alt="Иконка ДАК"]) {
+                    color: rgb(199, 177, 177); // Children of the Scarlet King
+                }
+
+                // Стили для ссылок внутри h3
+                a {
+                    text-decoration: none !important; // Убираем подчеркивание с повышенным приоритетом
+                    color: inherit; // Наследуем цвет от h3
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    // Убираем подчеркивание для всех состояний
+                    &, &:hover, &:visited, &:active, &:focus {
+                        text-decoration: none !important;
+                        color: inherit;
+                        outline: none !important; // Убираем обводку при фокусе
+                        border-bottom: none !important; // На случай, если это border
+                    }
+                }
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    font-size: 0.9rem;
+                    color: #fff3b1; // Цвет текста ролей
+                    line-height: 1.4;
+                    margin-bottom: 3px;
+
+                    &:hover {
+                        color: $link-hover-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    // Правая секция
+    .right-section {
+        background-color: $primary-bg;
+        padding: $padding;
+        border-radius: $border-radius;
+
+        h2 {
+            font-size: 1.25rem;
+            color: $text-color;
+            margin-bottom: math.div($padding, 2);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                font-size: 0.9rem;
+                color: #fff3b1;
+                line-height: 1.4;
+                margin-bottom: 3px;
+
+                &:hover {
+                    color: $link-hover-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    // Нижняя секция
+    .bottom-section {
+        grid-column: 1 / -1; // Занимает всю ширину
+        display: grid;
+        grid-template-columns: 0.5fr 3fr 0.5fr; // Отступы по краям
+
+        > h2, > .sub-section-row {
+            grid-column: 2 / 3; // Контент в средней колонке
+        }
+
+        .sub-section-row {
+            grid-template-columns: repeat(4, 1fr); // Четыре колонки для подзаголовков
+        }
+    }
+}

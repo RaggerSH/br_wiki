@@ -1,0 +1,155 @@
+// scss/_main.scss
+@use 'sass:math';
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: $gap;
+
+    .about {
+        background-color: $primary-bg;
+        padding: $padding;
+        border-radius: $border-radius;
+
+        .logo {
+            width: 120px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto $padding;
+            display: block;
+        }
+
+        h2 {
+            font-size: $font-size-h2;
+            color: $text-color;
+            margin-bottom: math.div($padding, 2);
+            text-align: center;
+        }
+
+        p {
+            font-size: $font-size-base;
+            color: $text-color;
+            line-height: 1.6;
+        }
+    }
+
+    .useful-links {
+        background-color: $primary-bg;
+        padding: $padding;
+        border-radius: $border-radius;
+
+        h2 {
+            font-size: $font-size-h2;
+            color: $text-color;
+            margin-bottom: math.div($padding, 2);
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: math.div($padding, 2) 0;
+            text-align: left;
+
+            a {
+                color: $link-color;
+                text-decoration: none;
+                font-size: $font-size-base;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .icon-container {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 30px;
+                    flex-shrink: 0;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+
+                    &[alt="Иконка Discord"] {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                &:hover {
+                    color: $link-hover-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .steam-groups {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // Оставляем две колонки
+        gap: $gap;
+        background-color: $primary-bg;
+        padding: $padding;
+        border-radius: $border-radius;
+
+        h2 {
+            grid-column: 1 / -1;
+            font-size: $font-size-h2;
+            color: $text-color;
+            text-align: center;
+            margin-bottom: math.div($padding, 2);
+        }
+
+        .group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $secondary-bg;
+            padding: math.div($padding, 2);
+            border-radius: $border-radius;
+
+            .group-avatar {
+                width: 100px; // Базовый размер для всех логотипов
+                height: 100px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+
+                // Увеличиваем размер только для логотипа Breach
+                &[alt="Аватарка Breach"] {
+                    width: 120px; // Устанавливаем ширину 120px
+                    height: 100px; // Устанавливаем высоту 100px
+                }
+            }
+
+            .group-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                background-color: #1b2838;
+                color: $text-color;
+                text-decoration: none;
+                font-size: 1.25rem;
+                padding: 5px 10px;
+                border-radius: 4px;
+                border: 1px solid #4c6b8a;
+
+                &:hover {
+                    background-color: lighten(#1b2838, 10%);
+                    cursor: pointer;
+                }
+            }
+
+            &:hover {
+                background-color: lighten($secondary-bg, 5%);
+            }
+        }
+    }
+}

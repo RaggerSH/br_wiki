@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Научный Отдел</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-sci">
+                    <h1>Научный Отдел</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/sci.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Научный отдел — это учёные работающие на Фонд. Они исследуют и проводят тесты над аномальными объектами SCP. В их составе можно встретить персонал от ассистента до главы персонала. Так-же в персонал входят уборщики и медики, но они имеют ограниченный доступ к объектам SCP.
+                </p>
+                <p>
+                    В случае возникновения в учреждении катастрофического события всем сотрудникам научного отдела рекомендуется как можно быстрее найти службу безопасности.
+                </p>
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Выбраться из комплекса живым.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span> отсутствуют
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span> <a href="../class-d/index.html">Класс Д</a>, <a href="/!factions/GOC/index.html">ГОК</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!factions/CI/index.html">Повстанцы Хаоса</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="/!foundation/MTF/index.html">Мобильная Оперативная Группа</a>, <a href="/!foundation/QRT/index.html">Отряд Быстрого Реагирования</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон-11</a>, <a href="/!foundation/security/index.html">Отдел безопасности</a>, <a href="/!foundation/spec-sci/index.html">Спец. ученые</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук начала раунда</h3>
+                <audio controls>
+                    <source src="../../media/Start_round_sci.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li>Ученые и <a href="/!foundation/spec-sci/index.html">спец-ученые</a> имеют одинаковый ранг, но приоритет спасения отдается вторым.</li>
+                    <li>За каждого эвакуированного ученого даётся дополнительный опыт в размере ~35 очков опыта.</li>
+                    <li>Среди данной фракции есть 2 шпиона, <a href="/!foundation/sci/SH_spy.html">Шпион ДЗ</a> и <a href="/!foundation/sci/UIU_spy.html">Шпион ОНП</a></li>
+                    
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

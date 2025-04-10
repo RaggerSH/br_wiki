@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класс-D</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-class-d">
+                    <h1>Класс-D</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/class_d.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Персонал Класса-D является специальной категорией персонала, предназначенной для
+                    работ с опасными аномалиями. Сотрудники Класса-D обычно набираются из заключённых,
+                    приговорённых к смертной казни, и используются для выполнения опасных заданий,
+                    связанных с аномалиями. Сотрудники Класса-D обычно направляются к заключённым,
+                    приговорённым к смертной казни, и используются для выполнения опасных заданий,
+                    связанных с аномалиями.
+                </p>
+                <p>
+                    В случае возникновения в учреждении катастрофического события все сотрудники Класса-D
+                    подлежат немедленному уничтожению, если только местная служба безопасности не примет иное
+                    решение.
+                </p>
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Побег из комплекса.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span> отсутствуют
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span> <a href="../MTF/index.html">Мобильная оперативная группа</a> , <a href="../QRT/index.html">Отряд быстрого реагирования</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон 11</a>, <a href="/!factions/GOC/index.html">ГОК</a>, <a href="../sci/index.html">Научный Отдел</a>, <a href="../spec-sci/index.html">Спец-ученые</a>, <a href="../security/index.html">Отдел безопасности</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="/!factions/CI/index.html">Повстанцы Хаоса</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук начала раунда</h3>
+                <audio controls>
+                    <source src="../../media/Start_round_classd.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li>Весь персонал Класса Д, за исключением <a href="../class-d/goc_spy.html">Шпиона ГОК</a>, может получить форму <a href="/!factions/CI/index.html">ПХ</a> от <a href="/!factions/CI/commander.html">Командира ПХ</a>.</li>
+                    <li><a href="/!foundation/security/CI_spy.html">Шпион Повстанцец Хаоса</a> имеет зельную подсветку у его союзников.</li>
+                    <li><a href="/!foundation/sci/ethics.html">Инспектор по этике</a> может перевести 2 сотрудников Класса Д во фракцию <a href="/!foundation/sci/index.html">научного отдела</a>. Все способности и особые предметы перестают работать, кроме активных(К примеру способность <a href="../class-d/sportsman.html">Спортсмена</a>). <a href="../class-d/goc_spy.html">Шпион ГОК</a> не меняет фракцию и получает форму, но все равно теряет заточку.</li>
+                    <li>Для Класса Д в <a href="/!items/equipables/form.html">одежде ученого</a> доступна <a href="/!other/escapes/helicopter.html">эвакуация на вертолёте</a>.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класс-D Спортсмен</title>
+    <link rel="stylesheet" href="../../css/styles-roles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="role-content">
+            <div class="header-row">
+                <header class="header-template role-class-d-fat">
+                    <h1>Класс-D Спортсмен</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="description">
+                <p></p> <!-- Пустой параграф для первого отступа -->
+                <p></p> <!-- Пустой параграф для второго отступа -->
+                <p>Класс-Д Спортсмен — долго и упорно тренировался, чтобы достичь отличных результатов в атлетике.</p>
+            </div>
+            <div class="role-image">
+                <img src="/img/Sport.webp" alt="Класс-D Спортсмен" id="role-img" onclick="openModal()">
+            </div>
+            <div class="image-buttons">
+                <button class="image-btn active" data-img="/img/Sport.webp">Обычный</button>
+                <button class="image-btn" data-img="/img/Classdcifem.webp">Форма ПХ</button>
+            </div>
+            <div class="characteristics">
+                <button class="toggle-button">Характеристики</button>
+                <div class="char-list">
+                    <ul>
+                        <li>Здоровье: 120</li>
+                        <li>Стамина: 160</li>
+                        <li>Требуемый уровень: 21</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ability">
+                <h3>Способность</h3>
+                <div class="ability">
+                    <button class="toggle-button">Способность</button>
+                    <div class="ability-content">
+                        <div class="ability-image">
+                            <img src="/img/ABILITI_SPORT_NAHUYI_00000.webp" alt="Run" width="150px" height="150px" >
+                        </div>
+                        <div class="ability-description">
+                            <p>Повышает скорость бега в 2 раза и меняет анимацию бега, которую видно при использовании рук.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>При переодевании <a href="/!foundation/sci/ethics.html">Инспектором по этике</a> не теряет свою способность, если она была включена.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="/JavaScript/main.js"></script>
+</body>
+</html>

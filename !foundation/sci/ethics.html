@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инспектор по Этике</title>
+    <link rel="stylesheet" href="../../css/styles-roles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="role-content">
+            <div class="header-row">
+                <header class="header-template role-sci">
+                    <h1>Инспектор по Этике</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="description">
+                <p></p> <!-- Пустой параграф для первого отступа -->
+                <p></p> <!-- Пустой параграф для второго отступа -->
+                <p>Инспектор по этике способен переманить на свою сторону любого сотрудника <a href="/!foundation/class-d/index.html">Класса Д</a>.</p>
+            </div>
+            <div class="role-image">
+                <img src="/img/QuestionableEthics.webp" alt="Инспектор По Этике" id="role-img" onclick="openModal()">
+            </div>
+            <div class="characteristics">
+                <button class="toggle-button">Характеристики</button>
+                <div class="char-list">
+                    <ul>
+                        <li>Здоровье: 110</li>
+                        <li>Стамина: 50</li>
+                        <li>Требуемый уровень: 25</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ability">
+                <div class="ability">
+                    <button class="toggle-button">Способность</button>
+                    <div class="ability-content">
+                        <div class="ability-image">
+                            <img src="/img/Ability_recruiter.webp" alt="Инспектор" width="150px" height="150px" >
+                        </div>
+                        <div class="ability-description">
+                            <p>Инспектор переодевает в специальную форму любого из <a href="/!foundation/class-d/index.html">Класса-Д</a>, имеет всего 2 заряда.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="/JavaScript/main.js"></script>
+</body>
+</html>

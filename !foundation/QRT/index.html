@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отряд Быстрого Реагирования</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-qrt">
+                    <h1>Отряд Быстрого Реагирования</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/obr.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Отряды быстрого реагирования являются группой поддержки основным силам фонда (<a href="/!foundation/MTF/index.html">МОГ</a>, <a href="/!foundation/security/index.html">СБ</a>). В них входят специализированные или занимающиеся поддержкой других отрядов солдаты. Вызов происходит непосредственно с помощью <a href="/!foundation/MTF/hof.html">Главы Комплекса</a>.
+                </p>
+                <br>
+                <p>
+                    В их основные задачи входит поддержка Охраны фонда, оборона комплекса и его поверхности.
+                </p>
+
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Защита <a href="/!foundation/sci/index.html">Научного отдела</a> и <a href="/!foundation/spec-sci/index.html">Спец. ученых</a></p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span>  <a href="/!factions/GOC/index.html">ГОК</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!factions/CI/index.html">Повстанцы Хаоса</a>, <a href="../class-d/index.html">Класс Д</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span> отсутствуют
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="/!foundation/security/index.html">Отдел безопасности</a>, <a href="/!foundation/MTF/index.html">Мобильная Оперативная Группа</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон-11</a>, <a href="/!foundation/sci/index.html">Научный отдел</a>, <a href="/!foundation/spec-sci/index.html">Спец. ученые</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук вызова ОБР</h3>
+                <audio controls>
+                    <source src="../../media/Obr.wav" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук из вступления</h3>
+                <audio controls>
+                    <source src="../../media/ORTIntro.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li>При беге, вы будете издавать слышимые для всех звуки.</li>
+                    <li>По сути, являются теми же <a href="/!foundation/MTF/index.html">МОГ</a>.</li>
+                
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

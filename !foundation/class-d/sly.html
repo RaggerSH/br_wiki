@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класс-D Проныра</title>
+    <link rel="stylesheet" href="../../css/styles-roles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="role-content">
+            <div class="header-row">
+                <header class="header-template role-class-d-fat">
+                    <h1>Класс-D Проныра</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="description">
+                <p></p> <!-- Пустой параграф для первого отступа -->
+                <p></p> <!-- Пустой параграф для второго отступа -->
+                <p>Класс-Д Проныра смог пронести в свою камеру содержания пару полезных предметов.</p>
+            </div>
+            <div class="role-image">
+                <img src="/img/Sneaky.webp" alt="Класс-D Проныра" id="role-img" onclick="openModal()">
+            </div>
+            <div class="image-buttons">
+                <button class="image-btn active" data-img="/img/Sneaky.webp">Обычный</button>
+                <button class="image-btn" data-img="/img/Classdcifem.webp">Форма ПХ</button>
+            </div>
+            <div class="characteristics">
+                <button class="toggle-button">Характеристики</button>
+                <div class="char-list">
+                    <ul>
+                        <li>Здоровье: 100</li>
+                        <li>Стамина: 100</li>
+                        <li>Требуемый уровень: 14</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>Снимает защитную перегородку КПП <a href="/!items/miscellaneous/index.html">отвёрткой</a> за 60 секунд, вместо 120.</li>
+                    <li> Сохраняет способность после переодевания <a href="/!foundation/sci/ethics.html">инспектором по этике</a>.</li>
+                    <li>При появлении получает <a href="/!items/miscellaneous/index.html">отвертку</a> и <a href="/!other/keycards/obshie.html">ключ-карту общего доступа 1 уровня</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="/JavaScript/main.js"></script>
+</body>
+</html>

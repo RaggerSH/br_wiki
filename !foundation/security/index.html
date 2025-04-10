@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отдел Безопасности</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-security">
+                    <h1>Отдел безопасности</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/sb.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Служба Безопасности - подразделение, отвечающие за охрану и защиту всех учреждений и SCP-объектов Фонда независимо от их приоритета. Сотрудники СБ натренированы и обучены действовать в условиях нарушения условий содержания SCP-объектов, а также в случае вторжения.
+                </p>
+                <p>
+                    Они выступают в роли охраны для персонала не столько от опасных объектов, сколько от них самих.    
+                </p>
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Защита <a href="/!foundation/sci/index.html">Научного отдела</a> и <a href="/!foundation/spec-sci/index.html">Спец. ученых</a>.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span>  <a href="/!factions/GOC/index.html">ГОК</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!factions/CI/index.html">Повстанцы Хаоса</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span> <a href="../class-d/index.html">Класс Д</a>
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="/!foundation/MTF/index.html">Мобильная Оперативная Группа</a>, <a href="/!foundation/QRT/index.html">Отряд Быстрого Реагирования</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон-11</a>, <a href="/!foundation/sci/index.html">Научный отдел</a>, <a href="/!foundation/spec-sci/index.html">Спец. ученые</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук начала раунда</h3>
+                <audio controls>
+                    <source src="../../media/Start_round_sci.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li>Некоторые сотрудники службы безопасности одеты в <a href="/!items/equipables/armor.html">шлема и бронежилеты</a> с начала раунда.</li>
+                    <li>Комната появления всего состава СБ будет заперта определенное время после начала раунда.</li>
+                    <li>Персонал службы безопасности может получить экипировку бойца <a href="/!foundation/MTF/index.html">МОГ</a> в оружейной Entrance Zone, то есть, они будут считаться как <a href="/!foundation/MTF/index.html"> оперативники МОГ</a> и должны будут выполнять их задачи.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

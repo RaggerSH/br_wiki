@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпион Длань Змея</title>
+    <link rel="stylesheet" href="../../css/styles-roles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="role-content">
+            <div class="header-row">
+                <header class="header-template role-sh">
+                    <h1>Шпион Длань Змея</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="description">
+                <p></p> <!-- Пустой параграф для первого отступа -->
+                <p></p> <!-- Пустой параграф для второго отступа -->
+                <p>Шпион Длани Змея - агент фракции <a href="/!factions/SH/index.html">Длань Змея</a>, работающий в Фонде под прикрытием. Задачей шпиона является помочь <a href="/!other/scp_play/index.html">SCP</a> сбежать из комплекса. Шпион Длани Змея появляется с формой <a href="/!foundation/sci/Scientist.html">ученого</a>.</p>
+            </div>
+            <div class="role-image">
+                <img src="/img/SHSpy.webp" alt="Шпион Длань Змея" id="role-img" onclick="openModal()">
+            </div>
+            <div class="characteristics">
+                <button class="toggle-button">Характеристики</button>
+                <div class="char-list">
+                    <ul>
+                        <li>Здоровье: 110</li>
+                        <li>Стамина: 150</li>
+                        <li>Требуемый уровень: 20</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>Подсвечивается зеленым у <a href="/!factions/SH/index.html">Длань Змея</a> и <a href="/!other/scp_play/index.html">SCP</a>.</li>
+                    <li>Шпиона нельзя разоружить.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="/JavaScript/main.js"></script>
+</body>
+</html>

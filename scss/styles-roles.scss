@@ -1,0 +1,99 @@
+@use 'sass:math';
+@import 'variables';
+@import 'roles-page';
+
+// Подключаем шрифт Stem-Bold
+@font-face {
+    font-family: 'Stem-Bold';
+    src: url('/stem-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Подключаем шрифт Stem-Regular
+@font-face {
+    font-family: 'Stem-Regular';
+    src: url('/stem-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Базовые стили для страниц ролей
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Stem-Bold', sans-serif;
+    font-size: $font-size-base;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding: $padding;
+    gap: $gap;
+}
+.ability {
+    display: grid;
+    grid-template-rows: auto 1fr; // Заголовок и содержимое
+    gap: 10px;
+
+    .toggle-button {
+        padding: 10px;
+        background-color: $secondary-bg;
+        color: $text-color;
+        font-family: 'Stem-Regular', sans-serif;
+        font-size: $font-size-base;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        text-align: left;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: lighten($secondary-bg, 10%);
+        }
+    }
+
+    .ability-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr; // Слева картинка, справа текст
+        gap: 20px;
+        background-color: darken($primary-bg, 5%);
+        padding: 15px;
+        border-radius: $border-radius;
+
+        // Список виден по умолчанию
+        &.hidden {
+            display: none; // Скрываем при добавлении класса hidden
+        }
+    }
+
+    .ability-image {
+        img {
+            max-width: 50%; // Уменьшаем изображение в 2 раза
+            height: auto;
+            border-radius: $border-radius;
+        }
+    }
+
+    .ability-description {
+        display: flex;
+        align-items: center; // Центрируем текст по вертикали
+        p {
+            font-family: 'Stem-Regular', sans-serif;
+            font-size: $font-size-base;
+            color: $text-color;
+            line-height: 1.6;
+            margin: 0;
+
+            
+        }
+    }
+}

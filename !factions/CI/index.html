@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повстанцы Хаоса</title>
+    <link rel="stylesheet" href="../../css/styles-faction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="faction-content">
+            <div class="header-row">
+                <header class="header-template faction-ci">
+                    <h1>Повстанцы Хаоса</h1>
+                </header>
+                <a href="/index.html" class="home-button">На главную</a>
+            </div>
+            <div class="separator"></div>
+            <img src="../../img/chaos.png" alt="Логотип Класс-D" class="logo" onclick="openModal()">
+            <section class="description">
+                <h2>Описание</h2>
+                <div class="separator"></div>
+                <p>
+                    Повстанцы Хаоса — объединение, отделившееся от Организации Фонда. Оно возникло, когда одно из подразделений самовольно покинуло свой участок, взяв с собой несколько крайне полезных SCP-объектов. Повстанцы Хаоса используют SCP-объекты для проникновение в страны "третьего мира", поддерживая внутри них нищету и постоянные военные конфликты, мобилизуя гражданских в свои ряды, используя их как расходный материал, как делает это Фонд.
+                </p>
+
+            </section>
+            <section class="tasks">
+                <h2>Задача</h2>
+                <div class="separator"></div>
+                <p>Срыв эвакуации фонда и спасение <a href="/!foundation/class-d/index.html">Класса-D</a>.</p>
+                <br>
+                <p class="hostile-factions">
+                    <span class="hostile-label">Враждебные фракции:</span>  <a href="/!factions/GOC/index.html">ГОК</a>, <a href="/!factions/UIU ARMY/index.html">Отдел Необычных Происшествий</a>, <a href="/!factions/UIU/index.html">Агенты ОНП</a>, <a href="/!factions/SH/index.html">Длань Змеи</a>, <a href="/!factions/COTSK/index.html">Дети Алого Короля</a>, <a href="/!foundation/security/index.html">Отдел безопасности</a>, <a href="/!foundation/QRT/index.html">Отряд Быстрого Реагирования</a>, <a href="/!foundation/MTF/index.html">Мобильная Оперативная Группа</a>, <a href="/!factions/NTF/index.html">МОГ Эпсилон-11</a>, <a href="/!other/scp_play/index.html">SCP</a>
+                </p>
+                <p class="neutral-factions">
+                    <span class="neutral-label">Нейтральные фракции:</span>  <a href="/!foundation/sci/index.html">Научный отдел</a>, <a href="/!foundation/spec-sci/index.html">Спец. ученые</a>
+                </p>
+                <p class="other-factions">
+                    <span class="other-label">Дружественные фракции:</span> <a href="../class-d/index.html">Класс Д</a>
+                </p>
+            </section>
+            <section class="additional">
+                <h2>Дополнительно</h2>
+                <div class="separator"></div>
+                <h3>Звук оповещения о прибытии</h3>
+                <audio controls>
+                    <source src="../../media/Enemy.ogg" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <h3>Звук из вступления</h3>
+                <audio controls>
+                    <source src="../../media/CI_intro.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                </audio>
+                <br>
+                <ul>
+                    <li><a href="/!foundation/security/CI_spy.html">Шпион Повстанцев Хаоса</a> имеет зелёную подсветку у его союзников.</li>
+                    <li>Максимум могут появиться только 5 оперативников среди которых обязательно есть <a href="/!factions/CI/Demoman.html">Подрывник ПХ</a>.</li>
+                    <li>За каждого эвакуированного <a href="/!foundation/class-d/index.html">Класса Д</a> через <a href="/!other/escapes/apc.html">БТР</a>, ПХ получают ~35 опыта.</li>
+                    <li>При беге, прыжке или приседании, вы будете издавать слышимые для всех звуки.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Подключаем main.js -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

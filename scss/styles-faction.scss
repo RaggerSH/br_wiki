@@ -1,0 +1,43 @@
+// scss/styles-faction.scss
+@use 'sass:math';
+@import 'variables';
+@import 'faction-page';
+
+// Подключаем шрифт Stem-Bold
+@font-face {
+    font-family: 'Stem-Bold';
+    src: url('../../fonts/Stem-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Подключаем шрифт Stem-Regular
+@font-face {
+    font-family: 'Stem-Regular';
+    src: url('../../fonts/Stem-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Базовые стили для страниц фракций
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Stem-Bold', sans-serif; // Шрифт по умолчанию для всей страницы
+    font-size: $font-size-base;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+// Стили для контейнера (копируем из _main.scss, чтобы не зависеть от styles.css)
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; // Шапка, основной контент, футер
+    min-height: 100vh;
+    padding: $padding;
+    gap: $gap;
+}
